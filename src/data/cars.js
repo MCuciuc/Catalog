@@ -4,7 +4,6 @@ const cars = [
     name: "BMW M3",
     year: 2021,
     price: "70,000 €",
-    image: "/images/bmw-m3.jpg",
     details: "Motor: 3.0L TwinTurbo, 480CP, Euro 6."
   },
   {
@@ -12,7 +11,6 @@ const cars = [
     name: "Audi A4",
     year: 2020,
     price: "40,000 €",
-    image: "/images/audi-a4.JPG",
     details: "Motor: 2.0L TFSI, 190CP, Euro 6."
   },
   {
@@ -20,7 +18,6 @@ const cars = [
     name: "Mercedes C-Class",
     year: 2022,
     price: "50,000 €",
-    image: "/images/mercedes-c-class.jpg",
     details: "Motor: 2.0L Turbo, 204CP, Euro 6."
   },
   {
@@ -28,7 +25,6 @@ const cars = [
     name: "Renault Talisman",
     year: 2019,
     price: "25,000 €",
-    image: "/images/talisman.jpg",
     details: "Motor: 1.6L dCi, 130CP, Euro 6."
   },
   {
@@ -36,7 +32,6 @@ const cars = [
     name: "Volkswagen Passat B6",
     year: 2008,
     price: "7,500 €",
-    image: "/images/passat-b6.jpg",
     details: "Motor: 2.0L TDI, 140CP, Euro 4."
   },
   {
@@ -44,7 +39,6 @@ const cars = [
     name: "Volkswagen Golf",
     year: 2015,
     price: "13,000 €",
-    image: "/images/golf.jpg",
     details: "Motor: 1.6L TDI, 110CP, Euro 6."
   },
   {
@@ -52,7 +46,6 @@ const cars = [
     name: "Renault Clio",
     year: 2018,
     price: "10,000 €",
-    image: "/images/clio.jpg",
     details: "Motor: 0.9L TCe, 90CP, Euro 6."
   },
   {
@@ -60,7 +53,6 @@ const cars = [
     name: "BMW X5",
     year: 2020,
     price: "60,000 €",
-    image: "/images/bmw-x5.jpg",
     details: "Motor: 3.0L Diesel, 265CP, Euro 6."
   }
 ];
