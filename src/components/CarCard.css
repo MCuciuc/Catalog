@@ -1,62 +1,69 @@
 .car-card {
-  background: transparent;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  perspective: 1000px;
-  width: 200px;
-  height: 150px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0; 
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  overflow: hidden;
+  margin: 16px;
 }
 
-.flip-card {
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
+.car-image-container {
   width: 100%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(.4,2,.3,1);
-  transform-style: preserve-3d;
+  height: 180px;
+  overflow: hidden;
 }
 
-.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 8px;
-  background: transparent; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.flip-card-front {
-  z-index: 2;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  z-index: 1;
-  padding: 10px;
-  background: white; 
-}
-
-.flip-card-front img {
+.car-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.car-info {
+  padding: 16px;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.car-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.book-now {
+  width: 100%;
+  padding: 12px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
   border-radius: 8px;
-  display: block;
-  margin: 0;
-  box-shadow: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.book-now:hover {
+  background: #5b4cc7;
 }

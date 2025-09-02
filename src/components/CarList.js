@@ -1,10 +1,11 @@
 import React from "react";
-import CarCard from "../components/CarCard";
+import CarCard from "./CarCard";
 import cars from "../data/cars";
+import "./CarList.css";
 
 function CarList() {
   return (
-    <div>
+    <div className="car-grid">
       {cars.map((car) => (
         <CarCard
           key={car.id}

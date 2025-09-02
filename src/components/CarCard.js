@@ -1,42 +1,48 @@
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import "./CarCard.css";
 
-function CarCard({ name, year, price, image, details }) {
-  const [flipped, setFlipped] = useState(false);
+const UNSPLASH_ACCESS_KEY = "1salBm6r2tGqVNBdOyg1BG4BMmOJDPfyIkNZST5xsDo";
 
-  const handleFlip = () => setFlipped((prev) => !prev);
+function CarCard({ name, year, price, details }) {
+  const [imageUrl, setImageUrl] = useState("");
+
+  useEffect(() => {
+    async function fetchImage() {
+      try {
+        const response = await fetch(
+          `https://api.unsplash.com/search/photos?query=${encodeURIComponent(name)}&client_id=${UNSPLASH_ACCESS_KEY}&per_page=1`
+        );
+        const data = await response.json();
+        if (data.results && data.results[0]) {
+          setImageUrl(data.results[0].urls.small);
+        } else {
+          setImageUrl("https://via.placeholder.com/300x200?text=No+Image");
+        }
+      } catch (error) {
+        setImageUrl("https://via.placeholder.com/300x200?text=Error");
+      }
+    }
+    fetchImage();
+  }, [name]);
 
   return (
-    <div
-      className={`car-card flip-card${flipped ? " flipped" : ""}`}
-      onClick={handleFlip}
-    >
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <img
-            src={image}
-            alt={name}
-            style={{
-              width: "150px",
-              height: "100px",
-              objectFit: "cover",
-              borderRadius: "8px",
-              display: "block",
-              margin: "0 auto",
-              cursor: "pointer"
-            }}
-          />
+    <div className="car-card">
+      <div className="car-image-container">
+        <img src={imageUrl} alt={name} className="car-image" />
+      </div>
+      <div className="car-info">
+        <h3 className="car-name">{name}</h3>
+        <div className="car-details">
+          <div className="detail-item">
+            <span>� {year}</span>
+          </div>
+          <div className="detail-item">
+            <span>{details}</span>
+          </div>
         </div>
-        <div className="flip-card-back">
-          <h3>{name}</h3>
-          <p>An: {year}</p>
-          <p>Preț: {price}</p>
-          {details && (
-            <div className="car-details">
-              <p>{details}</p>
-            </div>
-          )}
-        </div>
+        <div className="price">{price}</div>
+        <button className="book-now">Rent now</button>
       </div>
     </div>
   );
