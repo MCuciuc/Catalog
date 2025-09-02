@@ -6,7 +6,14 @@ function CarList() {
   return (
     <div>
       {cars.map((car) => (
-        <CarCard key={car.id} name={car.name} year={car.year} price={car.price} />
+        <CarCard
+          key={car.id}
+          name={car.name}
+          year={car.year}
+          price={car.price}
+          image={car.image}
+          details={car.details}
+        />
       ))}
     </div>
   );
