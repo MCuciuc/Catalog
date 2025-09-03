@@ -5,6 +5,8 @@
   width: 280px;
   overflow: hidden;
   margin: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .car-image-container {
@@ -21,38 +23,39 @@
 
 .car-info {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .car-name {
   font-size: 18px;
   font-weight: 600;
-  margin: 0 0 16px 0;
+  margin: 0;
   color: #333;
+}
+
+.car-year-fuel {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
 }
 
 .car-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #666;
   font-size: 14px;
+  color: #444;
+  margin: 0;
 }
 
 .price {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 12px;
+  margin-top: 8px;
 }
 
 .book-now {
+  margin-top: 12px;
   width: 100%;
   padding: 12px;
   background: #6c5ce7;
