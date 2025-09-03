@@ -1,13 +1,12 @@
 .filters {
-  display: inline-block;
-  margin-left: 10px;
   position: relative;
+  display: inline-block;
 }
 
 .filter-button {
   width: 40px;
   height: 40px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 50%;
   border: 1px solid #ccc;
   background: #f8f9fa;
@@ -19,30 +18,71 @@
   background: #e9ecef;
 }
 
-
 .filter-menu {
   position: absolute;
-  top: 40px;
-  left: 0;
+  top: 45px;
+  right: 0;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
-  width: 200px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   z-index: 10;
 }
 
-.filter-menu label {
+.filter-group {
+  margin-bottom: 12px;
+}
+
+.filter-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-.filter-menu select {
+.filter-group input[type="number"],
+.filter-group select {
   width: 100%;
-  margin-bottom: 10px;
   padding: 6px;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox input {
+  margin-right: 6px;
+}
+
+.apply-btn {
+  flex: 1;
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+.reset-btn {
+  flex: 1;
+  padding: 8px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #495057;
 }
