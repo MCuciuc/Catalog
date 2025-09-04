@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CarCard from "./CarCard";
 import cars from "../data/cars";
-import "./CarList.css";
+import "../styles/CarList.css";
 import Filters from "./Filters";
 
 function CarList() {

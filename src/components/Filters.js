@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Filters.css";
+import "../styles/Filters.css";
 
 function Filters({ onFilter }) {
   const [showMenu, setShowMenu] = useState(false);

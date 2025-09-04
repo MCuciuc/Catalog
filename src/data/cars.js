@@ -5,6 +5,7 @@ const cars = [
     year: 2021,
     price: "70,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 3.0L TwinTurbo, 480CP, Euro 6."
   },
   {
@@ -13,6 +14,7 @@ const cars = [
     year: 2020,
     price: "40,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 2.0L TFSI, 190CP, Euro 6."
   },
   {
@@ -21,6 +23,7 @@ const cars = [
     year: 2022,
     price: "50,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 2.0L Turbo, 204CP, Euro 6."
   },
   {
@@ -29,6 +32,7 @@ const cars = [
     year: 2019,
     price: "25,000 €",
     fuel: "Diesel",
+    rating: 5,
     details: "Motor: 1.6L dCi, 130CP, Euro 6."
   },
   {
@@ -37,6 +41,7 @@ const cars = [
     year: 2008,
     price: "7,500 €",
     fuel: "Diesel",
+    rating: 5,
     details: "Motor: 2.0L TDI, 140CP, Euro 4."
   },
   {
@@ -45,6 +50,7 @@ const cars = [
     year: 2015,
     price: "13,000 €",
     fuel: "Diesel",
+    rating: 5,
     details: "Motor: 1.6L TDI, 110CP, Euro 6."
   },
   {
@@ -53,6 +59,7 @@ const cars = [
     year: 2018,
     price: "10,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 0.9L TCe, 90CP, Euro 6."
   },
   {
@@ -61,6 +68,7 @@ const cars = [
     year: 2020,
     price: "60,000 €",
     fuel: "Diesel",
+    rating: 5,
     details: "Motor: 3.0L Diesel, 265CP, Euro 6."
   },
   {
@@ -69,6 +77,7 @@ const cars = [
     year: 2021,
     price: "22,000 €",
     fuel: "Hybrid",
+    rating: 5,
     details: "Motor: 1.8L Hybrid, 122CP, Euro 6."
   },
   {
@@ -77,6 +86,7 @@ const cars = [
     year: 2022,
     price: "35,000 €",
     fuel: "Hybrid",
+    rating: 5,
     details: "Motor: 2.5L Hybrid, 218CP, AWD."
   },
   {
@@ -85,6 +95,7 @@ const cars = [
     year: 2019,
     price: "18,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 1.0L EcoBoost, 125CP, Euro 6."
   },
   {
@@ -93,6 +104,7 @@ const cars = [
     year: 2021,
     price: "55,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 5.0L V8, 450CP, Euro 6."
   },
   {
@@ -101,6 +113,7 @@ const cars = [
     year: 2020,
     price: "20,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 1.5L TSI, 150CP, Euro 6."
   },
   {
@@ -109,6 +122,7 @@ const cars = [
     year: 2018,
     price: "27,000 €",
     fuel: "Diesel",
+    rating: 5,
     details: "Motor: 2.0L TDI, 190CP, Euro 6."
   },
   {
@@ -117,6 +131,7 @@ const cars = [
     year: 2021,
     price: "32,000 €",
     fuel: "Hybrid",
+    rating: 5,
     details: "Motor: 1.6L Hybrid, 225CP, Euro 6."
   },
   {
@@ -125,6 +140,7 @@ const cars = [
     year: 2020,
     price: "23,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 1.5L Turbo, 182CP, Euro 6."
   },
   {
@@ -133,6 +149,7 @@ const cars = [
     year: 2019,
     price: "28,000 €",
     fuel: "Hybrid",
+    rating: 5,
     details: "Motor: 2.0L Hybrid, 184CP, AWD."
   },
   {
@@ -141,6 +158,7 @@ const cars = [
     year: 2021,
     price: "26,000 €",
     fuel: "Benzină",
+    rating: 5,
     details: "Motor: 1.3L DIG-T, 140CP, Euro 6."
   },
   {
@@ -149,6 +167,7 @@ const cars = [
     year: 2022,
     price: "30,000 €",
     fuel: "Electric",
+    rating: 5,
     details: "Motor electric: 40 kWh, 150CP, autonomie 270km."
   },
   {
@@ -157,6 +176,7 @@ const cars = [
     year: 2022,
     price: "45,000 €",
     fuel: "Electric",
+    rating: 5,
     details: "Motor electric dual, 350CP, autonomie 500km."
   }
 ];

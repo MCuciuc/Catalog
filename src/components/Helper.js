@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Helper.css";
+import "../styles/Helper.css";
 
 function Helper() {
   const [open, setOpen] = useState(false);

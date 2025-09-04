@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CarCard.css";
+import "../styles/CarCard.css";
 
 const UNSPLASH_ACCESS_KEY = "1salBm6r2tGqVNBdOyg1BG4BMmOJDPfyIkNZST5xsDo";
 
