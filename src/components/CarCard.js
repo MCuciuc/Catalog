@@ -35,9 +35,11 @@ function CarCard({ name, year, price, fuel, details }) {
       <div className="car-info">
         <h3 className="car-name">{name}</h3>
         <p className="car-year-fuel">
-          {year} • {fuel}
+          📅 {year} • {fuel}
         </p>
-        <p className="car-details">{details}</p>
+        <p className="car-details">
+          ⚙️ {details}
+        </p>
         <div className="price">{price}</div>
         <button className="book-now">Rent now</button>
       </div>

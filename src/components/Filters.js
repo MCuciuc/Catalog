@@ -29,7 +29,6 @@ function Filters({ onFilter }) {
 
   const fuels = ["Benzină", "Diesel", "Hybrid", "Electric"];
 
-  // Închidem dropdown dacă se dă click în afara lui
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -74,7 +73,6 @@ function Filters({ onFilter }) {
 
       {showMenu && (
         <div className="filter-menu">
-          {/* An */}
           <div className="filter-group">
             <label>An minim:</label>
             <input
@@ -87,7 +85,7 @@ function Filters({ onFilter }) {
             />
           </div>
 
-          {/* Preț */}
+
           <div className="filter-group">
             <label>Preț maxim (€):</label>
             <input
@@ -100,7 +98,7 @@ function Filters({ onFilter }) {
             />
           </div>
 
-          {/* Brand */}
+
           <div className="filter-group">
             <label>Brand:</label>
             <select
@@ -123,7 +121,7 @@ function Filters({ onFilter }) {
             </select>
           </div>
 
-          {/* Combustibil */}
+    
           <div className="filter-group">
             <label>Combustibil:</label>
             <div>

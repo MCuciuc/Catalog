@@ -7,6 +7,7 @@ import Filters from "./Filters";
 function CarList() {
   const [search, setSearch] = useState("");
   const [filteredCars, setFilteredCars] = useState(cars);
+  const [showAll, setShowAll] = useState(false); 
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
@@ -19,12 +20,10 @@ function CarList() {
   const handleFilter = (filters) => {
     let result = cars;
 
-    // Filtru an
     if (filters.year) {
       result = result.filter((car) => car.year >= parseInt(filters.year));
     }
 
-    // Filtru preț
     if (filters.priceRange) {
       result = result.filter(
         (car) =>
@@ -33,19 +32,16 @@ function CarList() {
       );
     }
 
-    // Filtru brand (multiple select)
     if (filters.brand.length > 0) {
       result = result.filter((car) =>
         filters.brand.includes(car.name.split(" ")[0])
       );
     }
 
-    // Filtru combustibil
     if (filters.fuel.length > 0) {
-      result = result.filter((car) => filters.fuel.includes(car.fuel));
+      result = result.filter((car) => filters.fuel && filters.fuel.includes(car.fuel));
     }
 
-    // Filtru search
     if (search) {
       result = result.filter((car) =>
         car.name.toLowerCase().includes(search.toLowerCase())
@@ -55,21 +51,29 @@ function CarList() {
     setFilteredCars(result);
   };
 
+
+  const visibleCars = showAll ? filteredCars : filteredCars.slice(0, 8);
+
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+      <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginBottom: "20px" }}>
         <input
           type="text"
           placeholder="Caută mașină..."
           value={search}
           onChange={handleSearch}
-          style={{ padding: "6px 10px", borderRadius: "6px", border: "1px solid #ccc", width: "200px" }}
+          style={{
+            padding: "6px 10px",
+            borderRadius: "6px",
+            border: "1px solid #ccc",
+            width: "200px",
+          }}
         />
         <Filters onFilter={handleFilter} />
       </div>
 
       <div className="car-grid">
-        {filteredCars.map((car) => (
+        {visibleCars.map((car) => (
           <CarCard
             key={car.id}
             name={car.name}
@@ -80,6 +84,17 @@ function CarList() {
           />
         ))}
       </div>
+
+      {filteredCars.length > 8 && (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <button
+            className="show-more-btn"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Vezi mai puțin" : "Vezi mai mult"}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

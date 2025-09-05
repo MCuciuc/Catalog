@@ -1,4 +1,32 @@
 .car-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.show-more-btn {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.show-more-btn:hover {
+  background: #5b4cc7;
+}
+
+@media (max-width: 900px) {
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,13 +1,33 @@
 .footer {
-  background: linear-gradient(90deg, #34495e, #2c3e50);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: auto;
+  background: #f8f9fb;
+  color: #555;
+  padding: 30px 20px;
   font-size: 14px;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+  border-top: 1px solid #e0e0e0;
 }
 
-.footer p {
-  margin: 5px 0;
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.footer-column p {
+  margin: 4px 0;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
 }
